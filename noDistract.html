@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Get Back to Work</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Courier New', Courier, monospace;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      height: 100vh;
+      padding: 0 2rem;
+      margin: 0;
+    }
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: 1.5rem;
+      max-width: 800px;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="headline">Get Back to Work</h1>
+  <p id="message">You're not supposed to be here.</p>
+
+  <script>
+    const messages = [
+      {
+        title: "Wow.",
+        body: "You *really* just opened Reddit again? You said you wouldn't. Remember that? Your goals didn’t just disappear. But you might — into mediocrity. Close this tab."
+      },
+      {
+        title: "Your future self is watching.",
+        body: "And they're tired. Tired of cleaning up after distractions like this. They deserved better. And you knew it."
+      },
+      {
+        title: "Look at you, a productivity icon.",
+        body: "Sure, the world’s burning, deadlines are coming, but yeah, let's scroll Reddit. Genius move. Close this before your brain cells unionize."
+      },
+      {
+        title: "This is who you are now?",
+        body: "Just checking... this is the legacy you're building? Refreshing memes instead of finishing that thing you care about? Get real. Get back."
+      },
+      {
+        title: "Is this action aligned with your goals?",
+        body: "If yes, carry on. If not, why are you still here?"
+      }
+    ];
+
+    const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+    document.getElementById("headline").innerText = randomMessage.title;
+    document.getElementById("message").innerText = randomMessage.body;
+  </script>
+</body>
+</html>
